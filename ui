@@ -7,7 +7,7 @@ local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.N, dragSpeed
 local themes = {
     Dark = {
         TextColor = Color3.fromRGB(255, 255, 255),
-        MainFrame = Color3.fromRGB(79, 0, 58),
+        MainFrame = Color3.fromRGB(30,30, 30),
         TabBackground = Color3.fromRGB(20,20, 20),
         Tab = Color3.fromRGB(30, 30, 30),
         EnabledText = Color3.fromRGB(255, 255, 255),
