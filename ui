@@ -36,7 +36,7 @@ local themes = {
     },
     Red = {
         TextColor = Color3.fromRGB(255, 255, 255),
-        MainFrame = Color3.fromRGB(159, 47, 47), 
+        MainFrame = Color3.fromRGB(142, 22, 22), 
         TabBackground = Color3.fromRGB(75, 0, 130),  
         Tab = Color3.fromRGB(159, 47, 47),
         EnabledText = Color3.fromRGB(255, 255, 255),
