@@ -34,7 +34,7 @@ local themes = {
         ColorPicker = Color3.fromRGB(20, 20, 20),
         ColorPickerBoxes = Color3.fromRGB(30, 30, 30)
     },
-    Red = {
+    Black = {
         TextColor = Color3.fromRGB(255, 255, 255),
         MainFrame = Color3.fromRGB(2,15,24),  
         TabBackground = Color3.fromRGB(20, 20, 20),
