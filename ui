@@ -848,22 +848,24 @@ function library:Load(opts)
                 end
 
                 slider.InputBegan:Connect(function(input)
-                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-                        sliding = true
-                        utility.tween(fill, {0.2}, {BackgroundColor3 = theme.SliderFillSliding})
-                        slide(input)
-                    end
-                end)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                sliding = true
+                  utility.tween(fill, {0.2}, {BackgroundColor3 = theme.SliderFillSliding})
+                  slide(input)
+                 end
+                 end)
+
 
                 slider.InputEnded:Connect(function(input)
-                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-                        utility.tween(fill, {0.2}, {BackgroundColor3 = theme.SliderFill})
-                        sliding = false
-                        if not mouseOver then
-                            utility.tween(slider, {0.2}, {BackgroundColor3 = theme.Slider})
-                        end
-                    end
-                end)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        utility.tween(fill, {0.2}, {BackgroundColor3 = theme.SliderFill})
+        sliding = false
+        if not mouseOver then
+            utility.tween(slider, {0.2}, {BackgroundColor3 = theme.Slider})
+        end
+    end
+end)
+
 
                 slider.MouseEnter:Connect(function()
                     mouseOver = true
@@ -876,14 +878,15 @@ function library:Load(opts)
                         utility.tween(slider, {0.2}, {BackgroundColor3 = theme.Slider})
                     end
                 end)
-
+              
                 inputService.InputChanged:Connect(function(input)
-                    if input.UserInputType == Enum.UserInputType.MouseMovement then
-                        if sliding then
-                            slide(input)
-                        end
-                    end
+                 if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                      if sliding then
+                       slide(input)
+                      end
+                  end
                 end)
+
 
                 local sliderTypes = {}
                 sliderTypes = utility.format_table(sliderTypes)
