@@ -155,9 +155,6 @@ local themes = {
         ColorPickerBoxes = Color3.fromRGB(100, 160, 100)
     }
 }
-
-
-
 local themeObjects = {}
 for i, v in next, themes.Dark do
     themeObjects[i] = {}
